@@ -115,5 +115,5 @@ prose-li:list-disc
 dark:prose-li:marker:text-purple-500
 dark:prose-invert
 prose-li:leading-7
-prose-li:ml-4
+md:prose-li:ml-4
 `;
