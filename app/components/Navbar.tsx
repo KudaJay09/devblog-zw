@@ -15,7 +15,6 @@ function Navbar({ tags = false }: { tags?: boolean }) {
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
-          // exit={{ opacity: 0, y: -100 }}
           className="flex items-center justify-between"
         >
           <Link
@@ -30,16 +29,25 @@ function Navbar({ tags = false }: { tags?: boolean }) {
 
           <div className="flex items-center space-x-4">
             {tags && (
-              <div>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ delay: 0.5, duration: 1 }}
+              >
                 <Link href="/tag">
                   <TagsIcon
                     fontSize={33}
                     className="border border-zinc-300 rounded-full p-1 hover:bg-purple-500 hover:opacity-70  transition ease-in-out"
                   />
                 </Link>
-              </div>
+              </motion.div>
             )}
-            <ThemeSwitch />
+
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ delay: 1, duration: 1 }}
+            >
+              <ThemeSwitch />
+            </motion.div>
           </div>
         </motion.div>
       </AnimatePresence>
