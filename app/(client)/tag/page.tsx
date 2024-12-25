@@ -16,6 +16,7 @@ async function getAllTags() {
   return tags;
 }
 
+export const dynamic = "force-static";
 export const revalidate = 60;
 
 const page = async () => {

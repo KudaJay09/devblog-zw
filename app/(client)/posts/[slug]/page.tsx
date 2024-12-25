@@ -31,6 +31,7 @@ async function getPost(slug: string) {
   return post;
 }
 
+export const dynamic = "force-static";
 export const revalidate = 60; // revalidates every minute
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {

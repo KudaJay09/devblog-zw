@@ -20,6 +20,7 @@ async function getData() {
   return data;
 }
 
+export const dynamic = "force-static";
 export const revalidate = 60; // revalidates every minute
 
 export default async function Home() {
