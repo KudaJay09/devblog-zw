@@ -10,7 +10,7 @@ const font = Lilita_One({ weight: "400", subsets: ["latin"] });
 
 function Navbar({ tags = false }: { tags?: boolean }) {
   return (
-    <div className="mx-auto max-w-6xl p-6 sticky top-0 backdrop-blur-sm">
+    <div className="mx-auto max-w-6xl p-6 sticky top-0 border-b dark:border-b-purple-950 backdrop-blur-sm">
       <AnimatePresence>
         <motion.div
           initial={{ opacity: 0, y: -100 }}
