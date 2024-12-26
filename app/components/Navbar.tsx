@@ -5,6 +5,7 @@ import ThemeSwitch from "./ThemeSwitch";
 import { Lilita_One } from "next/font/google";
 import { TagsIcon } from "@sanity/icons";
 import { AnimatePresence, motion } from "framer-motion";
+import { tr } from "framer-motion/client";
 
 const font = Lilita_One({ weight: "400", subsets: ["latin"] });
 
@@ -14,8 +15,9 @@ function Navbar({ tags = false }: { tags?: boolean }) {
       <AnimatePresence>
         <div className="flex items-center justify-between">
           <motion.div
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
           >
             <Link
               href="/"
@@ -33,7 +35,7 @@ function Navbar({ tags = false }: { tags?: boolean }) {
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1, rotate: 360 }}
-                transition={{ delay: 0.5, duration: 1 }}
+                transition={{ delay: 1, duration: 1 }}
               >
                 <Link href="/tag">
                   <TagsIcon
@@ -47,7 +49,7 @@ function Navbar({ tags = false }: { tags?: boolean }) {
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1, rotate: 360 }}
-              transition={{ delay: 1, duration: 1 }}
+              transition={{ delay: 1.5, duration: 1 }}
             >
               <ThemeSwitch />
             </motion.div>
