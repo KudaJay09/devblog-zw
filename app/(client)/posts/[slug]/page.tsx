@@ -113,6 +113,7 @@ prose-p:mb-5
 prose-p:leading-7
 prose-li:list-disc
 dark:prose-li:marker:text-purple-500
+dark:prose-li:marker:animate-pulse
 dark:prose-invert
 prose-li:leading-7
 md:prose-li:ml-4

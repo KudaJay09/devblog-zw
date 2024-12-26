@@ -6,7 +6,7 @@ interface Props {
   tags?: boolean;
 }
 
-function Header({ title = "", tags = false }: Props) {
+function Header({ title, tags = false }: Props) {
   return (
     <div className="py-14 px-4 mb-12 text-center border-b dark:border-purple-900">
       <h2 className="uppercase text-2xl mx-auto max-w-2xl font-bold cursor-default">

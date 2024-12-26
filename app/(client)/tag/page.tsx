@@ -30,7 +30,7 @@ const page = async () => {
         {tags?.length > 0 &&
           tags?.map((tag) => (
             <Link key={tag?._id} href={`/tag/${tag.slug.current}`}>
-              <div className="mb-2 p-2 text-sm lowercase dark:bg-gray-950 border dark:border-gray-900 hover:text-purple-500 transition ease-in-out">
+              <div className="mb-4 p-2 text-sm lowercase dark:bg-gray-950 border dark:border-gray-900 hover:text-purple-500 transition ease-in-out">
                 #{tag?.name} ({tag?.postCount})
               </div>
             </Link>
