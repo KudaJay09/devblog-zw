@@ -12,25 +12,27 @@ function Navbar({ tags = false }: { tags?: boolean }) {
   return (
     <div className="mx-auto max-w-6xl p-6 sticky top-0 border-b dark:border-b-purple-950 backdrop-blur-sm">
       <AnimatePresence>
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-between"
-        >
-          <Link
-            href="/"
-            className={`${font.className} text-3xl hover:scale-105 transition duration-300 ease-in-out transform hover:animate-spin`}
+        <div className="flex items-center justify-between">
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
           >
-            Dev
-            <span className="bg-gradient-to-tr from-[#770BFF] via-45% via-[#D8C2FF] to-[#B982EE] bg-clip-text text-transparent">
-              Blog
-            </span>
-          </Link>
+            <Link
+              href="/"
+              className={`${font.className} text-3xl hover:scale-105 transition duration-300 ease-in-out transform hover:animate-spin`}
+            >
+              Dev
+              <span className="bg-gradient-to-tr from-[#770BFF] via-45% via-[#D8C2FF] to-[#B982EE] bg-clip-text text-transparent">
+                Blog
+              </span>
+            </Link>
+          </motion.div>
 
           <div className="flex items-center space-x-4">
             {tags && (
               <motion.div
-                animate={{ rotate: 360 }}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1, rotate: 360 }}
                 transition={{ delay: 0.5, duration: 1 }}
               >
                 <Link href="/tag">
@@ -43,13 +45,14 @@ function Navbar({ tags = false }: { tags?: boolean }) {
             )}
 
             <motion.div
-              animate={{ rotate: 360 }}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1, rotate: 360 }}
               transition={{ delay: 1, duration: 1 }}
             >
               <ThemeSwitch />
             </motion.div>
           </div>
-        </motion.div>
+        </div>
       </AnimatePresence>
     </div>
   );
