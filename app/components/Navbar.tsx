@@ -5,7 +5,7 @@ import ThemeSwitch from "./ThemeSwitch";
 import { Lilita_One } from "next/font/google";
 import { TagsIcon } from "@sanity/icons";
 import { AnimatePresence, motion } from "framer-motion";
-// import SearchPage from "./SearchPage";
+import SearchPage from "./SearchPage";
 
 const font = Lilita_One({ weight: "400", subsets: ["latin"] });
 
@@ -30,13 +30,13 @@ function Navbar({ tags = false }: { tags?: boolean }) {
             </Link>
           </motion.div>
 
-          {/* <motion.div
+          <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
             <SearchPage />
-          </motion.div> */}
+          </motion.div>
 
           <div className="flex items-center space-x-4">
             {tags && (
