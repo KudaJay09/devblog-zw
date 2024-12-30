@@ -3,7 +3,7 @@ import { searchPostByName } from "@/sanity/lib/posts/searchPostsByName";
 async function SearchPage({
   searchParams,
 }: {
-  searchParams: { query: string };
+  searchParams: Promise<{ query: string }>;
 }) {
   const { query } = await searchParams;
   const post = await searchPostByName(query);
