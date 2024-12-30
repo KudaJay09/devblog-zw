@@ -5,7 +5,7 @@ import ThemeSwitch from "./ThemeSwitch";
 import { Lilita_One } from "next/font/google";
 import { TagsIcon } from "@sanity/icons";
 import { AnimatePresence, motion } from "framer-motion";
-import { tr } from "framer-motion/client";
+import Form from "next/form";
 
 const font = Lilita_One({ weight: "400", subsets: ["latin"] });
 
@@ -29,6 +29,20 @@ function Navbar({ tags = false }: { tags?: boolean }) {
               </span>
             </Link>
           </motion.div>
+
+          <div>
+            <Form
+              action="/search"
+              classID="w-full sm:w-auto sm:flex-1 sm:mx-4 mt-2 sm:mt-0"
+            >
+              <input
+                type="text"
+                name="query"
+                placeholder="Search Article"
+                className="text-sm bg-gray-100 dark:bg-slate-950 text-gray-800 dark:text-gray-200 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-800 focus:ring-opacity-50 border dark:border-purple-950 w-full max-w-4xl"
+              />
+            </Form>
+          </div>
 
           <div className="flex items-center space-x-4">
             {tags && (
