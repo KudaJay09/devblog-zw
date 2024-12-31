@@ -43,7 +43,7 @@ function Navbar({ tags = false }: { tags?: boolean }) {
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1, rotate: 360 }}
-                transition={{ delay: 1.5, duration: 1 }}
+                transition={{ delay: 1, duration: 1 }}
               >
                 <Link href="/tag">
                   <TagsIcon
@@ -57,7 +57,7 @@ function Navbar({ tags = false }: { tags?: boolean }) {
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1, rotate: 360 }}
-              transition={{ delay: 2, duration: 1 }}
+              transition={{ delay: 1.5, duration: 1 }}
             >
               <ThemeSwitch />
             </motion.div>
