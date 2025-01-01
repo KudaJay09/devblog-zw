@@ -18,6 +18,7 @@ function Navbar({ tags = false }: { tags?: boolean }) {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
+            className="hover:animate-pulse"
           >
             <Link
               href="/"
