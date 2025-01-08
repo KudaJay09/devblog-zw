@@ -2,6 +2,7 @@ import { client } from "@/sanity/lib/client";
 import Header from "../components/Header";
 import Posts from "../components/Posts";
 import { Post } from "../utils/interface";
+import Head from "next/head";
 
 async function getData() {
   const query = `
@@ -28,6 +29,9 @@ export default async function Home() {
 
   return (
     <div>
+      <Head>
+        <title>HomePage</title>
+      </Head>
       <Header title="Articles" />
       <div>
         {posts?.length > 0 &&
